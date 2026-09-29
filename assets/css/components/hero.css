@@ -3,15 +3,39 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 40px; /* Espacio horizontal entre la imagen y el texto */
   padding: 120px 8% 60px;
   box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Contenedor e Imagen de Perfil */
+.profile-container {
+  flex-shrink: 0; /* Impide que la foto se deforme o encoja */
+}
+
+.profile-img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%; /* Imagen totalmente circular */
+  object-fit: cover;
+  border: 2px solid var(--border-glow);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.25); /* Resplandor neón suave */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(0, 242, 254, 0.45);
+}
+
+/* Contenido de texto */
 .hero-content {
-  max-width: 800px;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .badge-status {
@@ -26,7 +50,7 @@
 }
 
 .hero-content h1 {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: var(--text-primary);
   margin: 0;
@@ -34,7 +58,7 @@
 }
 
 .hero-content h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 600;
   background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
   -webkit-background-clip: text;
@@ -43,15 +67,35 @@
 }
 
 .hero-description {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.7;
   margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .hero-buttons {
   display: flex;
   gap: 16px;
-  margin-top: 10px;
+  margin-top: 8px;
   flex-wrap: wrap;
+}
+
+/* Adaptación para pantallas pequeñas (Móviles / Tablets) */
+@media (max-width: 868px) {
+  .hero-section {
+    flex-direction: column;
+    padding-top: 140px;
+    text-align: center;
+  }
+
+  .badge-status {
+    align-self: center;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+  }
 }
