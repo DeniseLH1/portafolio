@@ -15,7 +15,10 @@
   <link rel="stylesheet" href="./assets/css/global.css">
   <link rel="stylesheet" href="./assets/css/components/navbar.css">
   <link rel="stylesheet" href="./assets/css/components/hero.css">
+  <link rel="stylesheet" href="./assets/css/components/buttons.css">
   <link rel="stylesheet" href="./assets/css/components/cards.css">
+  <link rel="stylesheet" href="./assets/css/components/projects.css">
+  <link rel="stylesheet" href="./assets/css/components/contact.css">
 </head>
 <body>
 
@@ -29,12 +32,12 @@
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#habilidades">Habilidades</a></li>
       <li><a href="#contacto">Contacto</a></li>
-      <li><a href="./assets/docs/Jennifer_Lopez_CV.pdf" target="_blank" class="btn-cv">CV PDF</a></li>
+      <li><a href="./assets/docs/CV-Jennifer-López.pdf" target="_blank" class="btn-cv">CV PDF</a></li>
     </ul>
   </nav>
 
 <!-- Sección Hero -->
-  <header id="hero" class="hero-section">
+  <header id="hero" class="hero-section page-view" data-page-view>
     <!-- Contenedor de la foto de perfil -->
     <div class="profile-container">
       <img src="./assets/img/profile.png" alt="Jennifer Denise López Hernandez" class="profile-img">
@@ -50,14 +53,14 @@
       </p>
       <div class="hero-buttons">
         <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-        <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary">GitHub</a>
-        <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="btn btn-secondary">LinkedIn</a>
+        <a href="https://github.com/DeniseLH1" target="_blank" class="btn btn-secondary">GitHub</a>
+        <a href="https://www.linkedin.com/in/denise-lopez-201914352" target="_blank" class="btn btn-secondary">LinkedIn</a>
       </div>
     </div>
   </header>
 
   <!-- Sección Sobre Mí -->
-  <section id="sobre-mi" class="section-container">
+  <section id="sobre-mi" class="section-container page-view" data-page-view hidden>
     <h3 class="section-title">Sobre Mí</h3>
     <div class="card glass-card">
       <p>
@@ -67,7 +70,7 @@
   </section>
 
   <!-- Sección Proyectos -->
-  <section id="proyectos" class="section-container">
+  <section id="proyectos" class="section-container page-view" data-page-view hidden>
     <h3 class="section-title">Proyectos Destacados</h3>
     <div class="projects-grid">
 
@@ -138,7 +141,7 @@
   </section>
 
   <!-- Sección Habilidades -->
-  <section id="habilidades" class="section-container">
+  <section id="habilidades" class="section-container page-view" data-page-view hidden>
     <h3 class="section-title">Habilidades Técnicas</h3>
     <div class="skills-grid">
       <div class="card skill-card">
@@ -157,7 +160,7 @@
   </section>
 
   <!-- Footer / Contacto -->
-  <footer id="contacto" class="footer-container">
+  <footer id="contacto" class="footer-container page-view" data-page-view hidden>
     <div class="card glass-card text-center">
       <h3>¿Trabajamos juntos?</h3>
       <p>

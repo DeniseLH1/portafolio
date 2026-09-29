@@ -1,26 +1,33 @@
-// Lógica general de la interfaz (Scroll suave y efectos)
 document.addEventListener("DOMContentLoaded", () => {
-  // Scroll suave para los enlaces de navegación
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+  const views = [...document.querySelectorAll("[data-page-view]")];
+  const navigationLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+
+  function showCurrentView() {
+    const requestedId = window.location.hash.slice(1);
+    const activeId = views.some(view => view.id === requestedId) ? requestedId : "hero";
+
+    views.forEach(view => {
+      view.hidden = view.id !== activeId;
+    });
+
+    navigationLinks.forEach(link => {
+      if (link.hash === `#${activeId}`) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
       }
     });
-  });
 
-  // Sombras/Efecto en la Navbar al hacer scroll
-  const navbar = document.querySelector('.navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
-    } else {
-      navbar.style.boxShadow = 'none';
-    }
+    window.scrollTo(0, 0);
+  }
+
+  window.addEventListener("hashchange", showCurrentView);
+  showCurrentView();
+
+  const navbar = document.querySelector(".navbar");
+  window.addEventListener("scroll", () => {
+    navbar.style.boxShadow = window.scrollY > 50
+      ? "0 10px 30px rgba(0, 0, 0, 0.5)"
+      : "none";
   });
 });
