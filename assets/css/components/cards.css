@@ -16,3 +16,25 @@
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(0, 242, 254, 0.15);
 }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  min-height: 180px;
+}
+
+.skill-card h4 {
+  margin: 0 0 14px;
+  color: var(--accent-cyan);
+  font-size: 1.1rem;
+}
+
+.skill-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
