@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jennifer López | Junior Full Stack Developer</title>
+
+  <!-- Fuentes Google (Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/global.css">
+  <link rel="stylesheet" href="./assets/css/components/navbar.css">
+  <link rel="stylesheet" href="./assets/css/components/hero.css">
+  <link rel="stylesheet" href="./assets/css/components/cards.css">
+</head>
+<body>
+
+  <!-- Barra de Navegación -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#hero">&lt;JenniferLópez /&gt;</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#sobre-mi">Sobre Mí</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="./assets/docs/Jennifer_Lopez_CV.pdf" target="_blank" class="btn-cv">CV PDF</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección Hero -->
+  <header id="hero" class="hero-section">
+    <div class="hero-content">
+      <span class="badge-status">🟢 Disponible para proyectos y vacantes</span>
+      <h1>Jennifer Denise López Hernandez</h1>
+      <h2>Junior Full Stack Developer</h2>
+      <p class="hero-description">
+        Desarrolladora de software orientada a la creación de aplicaciones web escalables, integración de servicios backend, bases de datos y automatizaciones de flujos de trabajo. Apasionada por resolver problemas complejos mediante código limpio, arquitectura eficiente e interfaces intuitivas.
+      </p>
+      <div class="hero-buttons">
+        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+        <a href="https://github.com/tu-usuario" target="_blank" class="btn btn-secondary">GitHub</a>
+        <a href="https://linkedin.com/in/tu-usuario" target="_blank" class="btn btn-secondary">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sección Sobre Mí -->
+  <section id="sobre-mi" class="section-container">
+    <h3 class="section-title">Sobre Mí</h3>
+    <div class="card glass-card">
+      <p>
+        Estudiante e ingeniera en formación técnica dentro del programa intensivo de Campuslands, con experiencia práctica desarrollando soluciones full stack modernas. Me especializo en tecnologías como JavaScript, TypeScript, Node.js, Express, MongoDB y PostgreSQL. Además, cuento con bases sólidas en automatización de procesos mediante n8n, soporte técnico de hardware y microcontroladores.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sección Proyectos -->
+  <section id="proyectos" class="section-container">
+    <h3 class="section-title">Proyectos Destacados</h3>
+    <div class="projects-grid">
+
+      <!-- Proyecto 1: Tickyiyo -->
+      <article class="card project-card">
+        <div class="project-img-placeholder">
+          <img src="./assets/img/projects/tickyiyo.png" alt="Vista previa Tickyiyo" onerror="this.style.display='none'">
+        </div>
+        <h4>Tickyiyo – Plataforma de Ticketing para Eventos</h4>
+        <p class="project-desc">
+          Aplicación web interactiva para la adquisición y gestión de boletos en tiempo real. Cuenta con sistema de autenticación de usuarios, panel administrativo para control de eventos (CRUD completo) y manipulación optimizada del DOM.
+        </p>
+        <div class="tech-tags">
+          <span>JavaScript (ES6+)</span>
+          <span>HTML5</span>
+          <span>CSS Grid/Flexbox</span>
+          <span>LocalStorage</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" class="btn-link">Live Demo ↗</a>
+          <a href="#" target="_blank" class="btn-link">Código en GitHub ↗</a>
+        </div>
+      </article>
+
+      <!-- Proyecto 2: Automatización n8n -->
+      <article class="card project-card">
+        <div class="project-img-placeholder">
+          <img src="./assets/img/projects/n8n.png" alt="Vista previa n8n" onerror="this.style.display='none'">
+        </div>
+        <h4>Flujos de Automatización con n8n y Telegram</h4>
+        <p class="project-desc">
+          Implementación de flujos de trabajo automatizados para optimizar el procesamiento y validación de justificantes mediante APIs, integración con Google Sheets y bots interactivos de Telegram, reduciendo tiempos manuales operativos.
+        </p>
+        <div class="tech-tags">
+          <span>n8n</span>
+          <span>Telegram API</span>
+          <span>Google Sheets API</span>
+          <span>Webhooks</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" class="btn-link">Ver Diagrama ↗</a>
+          <a href="#" target="_blank" class="btn-link">Repositorio ↗</a>
+        </div>
+      </article>
+
+      <!-- Proyecto 3: Refactorización OMS -->
+      <article class="card project-card">
+        <div class="project-img-placeholder">
+          <img src="./assets/img/projects/oms.png" alt="Vista previa OMS" onerror="this.style.display='none'">
+        </div>
+        <h4>Refactorización & Optimización de BD OMS</h4>
+        <p class="project-desc">
+          Reestructuración técnica de un Sistema de Gestión de Órdenes (OMS). Se redujo la arquitectura relacional masiva de más de 1,000 tablas a aproximadamente 400 mediante normalización avanzada y optimización de esquemas.
+        </p>
+        <div class="tech-tags">
+          <span>Node.js</span>
+          <span>PostgreSQL</span>
+          <span>MySQL</span>
+          <span>Optimización BD</span>
+        </div>
+        <div class="project-links">
+          <a href="#" target="_blank" class="btn-link">Documentación ↗</a>
+          <a href="#" target="_blank" class="btn-link">Repositorio ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Sección Habilidades -->
+  <section id="habilidades" class="section-container">
+    <h3 class="section-title">Habilidades Técnicas</h3>
+    <div class="skills-grid">
+      <div class="card skill-card">
+        <h4>Frontend</h4>
+        <p>JavaScript (ES6+), TypeScript, HTML5, CSS3, CSS Grid, Flexbox, Layouts Responsive.</p>
+      </div>
+      <div class="card skill-card">
+        <h4>Backend & Bases de Datos</h4>
+        <p>Node.js, Express.js, REST APIs, MongoDB, PostgreSQL, MySQL, Supabase, Firebase Firestore.</p>
+      </div>
+      <div class="card skill-card">
+        <h4>Herramientas & DevOps</h4>
+        <p>Git, GitHub, Git Flow, Docker, Postman, Insomnia, n8n, VS Code, Linux CLI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contacto -->
+  <footer id="contacto" class="footer-container">
+    <div class="card glass-card text-center">
+      <h3>¿Trabajamos juntos?</h3>
+      <p>
+        Estoy disponible para incorporarme a equipos de desarrollo web y proyectos de tecnología. ¡Hablemos!
+      </p>
+      <a href="mailto:jennifer.lopez.devgt@gmail.com" class="btn btn-primary">Enviar Correo Directo</a>
+      <p class="copyright">© 2026 Jennifer Denise López Hernandez. Desarrollado con HTML, CSS y JS.</p>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
