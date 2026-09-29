@@ -6,7 +6,7 @@ const projectsData = [
     description: "Aplicación web interactiva para la adquisición y gestión de boletos en tiempo real. Cuenta con autenticación, CRUD completo para eventos y manipulación del DOM.",
     tags: ["JavaScript (ES6+)", "HTML5", "CSS Grid/Flexbox", "LocalStorage"],
     demoUrl: "https://tu-demo.com",
-    githubUrl: "https://github.com/tu-usuario/tickyiyo",
+    githubUrl: "https://github.com/DeniseLH1/conciertos_tickyiyo.git",
     image: "./assets/img/projects/tickyiyo.png"
   },
   {
@@ -15,16 +15,16 @@ const projectsData = [
     description: "Implementación de flujos de trabajo automatizados para optimizar el procesamiento de justificantes mediante APIs y bots interactivos.",
     tags: ["n8n", "Telegram API", "Google Sheets API", "Webhooks"],
     demoUrl: "#",
-    githubUrl: "https://github.com/tu-usuario/n8n-workflows",
+    githubUrl: "https://github.com/DeniseLH1/justificacion_inasistencia.git",
     image: "./assets/img/projects/n8n.png"
   },
   {
-    id: "oms-refactor",
-    title: "Refactorización & Optimización de BD OMS",
-    description: "Reestructuración técnica de un Sistema de Gestión de Órdenes, optimizando la base de datos de más de 1,000 tablas a aproximadamente 400.",
-    tags: ["Node.js", "PostgreSQL", "MySQL", "Optimización BD"],
+    id: "music-stream",
+    title: "MusicStream – Plataforma Web de Streaming Musical",
+    description: "Aplicación web frontend con interfaz en modo oscuro dedicada a la exploración musical, detalle de álbumes, reproductor interactivo de audio y flujo de checkout.",
+    tags: ["HTML5", "CSS3", "JavaScript (ES6+)", "CSS Grid/Flexbox"],
     demoUrl: "#",
-    githubUrl: "https://github.com/tu-usuario/oms-refactor",
-    image: "./assets/img/projects/oms.png"
+    githubUrl: "https://github.com/DeniseLH1/music_stream_app_Jennifer_Lopez.git",
+    image: "./assets/img/projects/musicstream.png"
   }
 ];
