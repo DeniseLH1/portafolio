@@ -1,0 +1,35 @@
+.footer-container {
+  padding: 80px 8% 40px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.footer-container .card {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 24px;
+}
+
+.footer-container h3 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.footer-container p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  margin-top: 20px !important;
+}
