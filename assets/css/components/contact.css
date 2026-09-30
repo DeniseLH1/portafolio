@@ -27,6 +27,46 @@
   margin: 0;
 }
 
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.contact-links .btn {
+  gap: 8px;
+  cursor: pointer;
+}
+
+.contact-links .btn i,
+.contact-links .btn svg {
+  flex: 0 0 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.contact-links .btn svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.contact-copy-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .copyright {
   font-size: 0.8rem;
   color: var(--text-secondary);

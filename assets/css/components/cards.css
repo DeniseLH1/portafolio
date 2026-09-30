@@ -19,16 +19,19 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
-  gap: 20px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
 }
 
 .skill-card {
-  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
 }
 
 .skill-card h4 {
-  margin: 0 0 14px;
+  margin: 0;
   color: var(--accent-cyan);
   font-size: 1.1rem;
 }
@@ -37,4 +40,30 @@
   margin: 0;
   color: var(--text-secondary);
   line-height: 1.7;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.skill-item i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.skill-support {
+  margin-top: 0 !important;
 }
