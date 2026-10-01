@@ -5,7 +5,7 @@ const projectsData = [
     title: "Tickyiyo – Plataforma de Ticketing para Eventos",
     description: "Aplicación web interactiva para la adquisición y gestión de boletos en tiempo real. Cuenta con autenticación, CRUD completo para eventos y manipulación del DOM.",
     tags: ["JavaScript (ES6+)", "HTML5", "CSS Grid/Flexbox", "LocalStorage"],
-    demoUrl: "https://tu-demo.com",
+    demoUrl: "#",
     githubUrl: "https://github.com/DeniseLH1/conciertos_tickyiyo.git",
     image: "./assets/img/projects/tickyiyo.png"
   },
