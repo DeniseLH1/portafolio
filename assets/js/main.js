@@ -1,6 +1,55 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const translations = window.portfolioTranslations;
+  const languageButtons = [...document.querySelectorAll("[data-set-language]")];
   const views = [...document.querySelectorAll("[data-page-view]")];
   const navigationLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  let currentLanguage = "es";
+
+  try {
+    currentLanguage = localStorage.getItem("portfolio-language") === "en" ? "en" : "es";
+  } catch {
+    currentLanguage = "es";
+  }
+
+  function setLanguage(language) {
+    const dictionary = translations[language];
+    if (!dictionary) return;
+
+    currentLanguage = language;
+    document.documentElement.lang = language;
+    document.title = dictionary.documentTitle;
+
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+      const translation = dictionary[element.dataset.i18n];
+      if (translation !== undefined) element.textContent = translation;
+    });
+
+    document.querySelectorAll("[data-i18n-aria-label]").forEach(element => {
+      const translation = dictionary[element.dataset.i18nAriaLabel];
+      if (translation !== undefined) element.setAttribute("aria-label", translation);
+    });
+
+    document.querySelectorAll("[data-i18n-alt]").forEach(element => {
+      const translation = dictionary[element.dataset.i18nAlt];
+      if (translation !== undefined) element.alt = translation;
+    });
+
+    languageButtons.forEach(button => {
+      button.setAttribute("aria-pressed", String(button.dataset.setLanguage === language));
+    });
+
+    try {
+      localStorage.setItem("portfolio-language", language);
+    } catch {
+      // The selected language still applies for this page view.
+    }
+  }
+
+  languageButtons.forEach(button => {
+    button.addEventListener("click", () => setLanguage(button.dataset.setLanguage));
+  });
+
+  setLanguage(currentLanguage);
 
   function showCurrentView() {
     const requestedId = window.location.hash.slice(1);
@@ -66,13 +115,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     clearTimeout(copyFeedbackTimeout);
-    copyEmailLabel.textContent = copied ? "¡Copiado!" : "No se pudo copiar";
+    const translationsForLanguage = translations[currentLanguage];
+    copyEmailLabel.textContent = copied
+      ? translationsForLanguage["contact.copied"]
+      : translationsForLanguage["contact.copyFailed"];
     copyEmailStatus.textContent = copied
-      ? "Correo copiado al portapapeles."
-      : "No se pudo copiar el correo. Inténtalo de nuevo.";
+      ? translationsForLanguage["contact.copiedStatus"]
+      : translationsForLanguage["contact.copyFailedStatus"];
 
     copyFeedbackTimeout = window.setTimeout(() => {
-      copyEmailLabel.textContent = "Correo";
+      copyEmailLabel.textContent = translations[currentLanguage]["contact.email"];
       copyEmailStatus.textContent = "";
     }, 2000);
   });
