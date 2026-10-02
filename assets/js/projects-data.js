@@ -4,7 +4,7 @@ const projectsData = [
     id: "tickyiyo",
     title: "Tickyiyo – Plataforma de Ticketing para Eventos",
     description: "Aplicación web interactiva para la adquisición y gestión de boletos en tiempo real. Cuenta con autenticación, CRUD completo para eventos y manipulación del DOM.",
-    tags: ["JavaScript (ES6+)", "HTML5", "CSS Grid/Flexbox", "LocalStorage"],
+    tags: ["JavaScript", "HTML", "CSS Grid/Flexbox", "LocalStorage"],
     demoUrl: "#",
     githubUrl: "https://github.com/DeniseLH1/conciertos_tickyiyo.git",
     image: "./assets/img/projects/tickyiyo.png"
@@ -22,7 +22,7 @@ const projectsData = [
     id: "music-stream",
     title: "MusicStream – Plataforma Web de Streaming Musical",
     description: "Aplicación web frontend con interfaz en modo oscuro dedicada a la exploración musical, detalle de álbumes, reproductor interactivo de audio y flujo de checkout.",
-    tags: ["HTML5", "CSS3", "JavaScript (ES6+)", "CSS Grid/Flexbox"],
+    tags: ["HTML", "CSS", "JavaScript", "CSS Grid/Flexbox"],
     demoUrl: "#",
     githubUrl: "https://github.com/DeniseLH1/music_stream_app_Jennifer_Lopez.git",
     image: "./assets/img/projects/musicstream.png"

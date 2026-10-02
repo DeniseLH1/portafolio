@@ -24,6 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (translation !== undefined) element.textContent = translation;
     });
 
+    document.querySelectorAll("[data-i18n-html]").forEach(element => {
+      const translation = dictionary[element.dataset.i18nHtml];
+      if (translation !== undefined) element.innerHTML = translation;
+    });
+
     document.querySelectorAll("[data-i18n-aria-label]").forEach(element => {
       const translation = dictionary[element.dataset.i18nAriaLabel];
       if (translation !== undefined) element.setAttribute("aria-label", translation);
