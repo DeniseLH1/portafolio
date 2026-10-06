@@ -40,6 +40,7 @@
   margin: 0;
   color: var(--text-secondary);
   line-height: 1.7;
+  text-align: justify;
 }
 
 .skill-items {
@@ -126,6 +127,7 @@
   font-size: 1.06rem;
   line-height: 1.72;
   color: #e9f3ff;
+  text-align: justify;
 }
 
 @media (max-width: 700px) {
