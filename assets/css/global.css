@@ -1,3 +1,4 @@
+/* Estilos globales del documento y fondo decorativo compartido por todas las vistas. */
 body {
   background-color: var(--bg-dark);
   /* Gradientes radiales fijados para el efecto de luz futurista */
@@ -14,6 +15,7 @@ body {
   text-align: justify;
 }
 
+/* Mantiene alineados los párrafos y enlaces principales del sitio. */
 p,
 li {
   text-align: justify;
@@ -23,10 +25,12 @@ li {
   text-align: center;
 }
 
+/* Oculta las secciones que no corresponden a la ruta actual. */
 .page-view[hidden] {
   display: none !important;
 }
 
+/* Dimensiones, separación superior y ancho máximo de las vistas internas. */
 .section-container.page-view,
 .footer-container.page-view {
   min-height: 100vh;
@@ -36,17 +40,20 @@ li {
   padding: 120px clamp(24px, 6vw, 96px) 60px;
 }
 
+/* Tipografía del título de las secciones. */
 .section-container.page-view .section-title {
   margin: 0 0 28px;
   color: var(--text-primary);
   font-size: 2rem;
 }
 
+/* Ancho y espacio interior de las tarjetas de contenido. */
 .section-container.page-view .glass-card {
   max-width: 860px;
   padding: clamp(24px, 4vw, 48px);
 }
 
+/* Estilo de los párrafos dentro de las tarjetas principales. */
 .section-container.page-view .glass-card p {
   margin: 0;
   color: var(--text-secondary);
@@ -58,6 +65,7 @@ li {
   align-items: center;
 }
 
+/* Reduce el espacio superior en móviles para respetar la barra de navegación. */
 @media (max-width: 600px) {
   .section-container.page-view,
   .footer-container.page-view {

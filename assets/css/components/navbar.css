@@ -1,3 +1,4 @@
+/* Barra fija superior con fondo translúcido y desenfoque. */
 .navbar {
   position: fixed;
   top: 0;
@@ -15,6 +16,7 @@
   box-sizing: border-box;
 }
 
+/* Marca del portafolio y enlace para volver al inicio. */
 .logo a {
   font-size: 1.2rem;
   font-weight: 700;
@@ -24,6 +26,7 @@
   white-space: nowrap;
 }
 
+/* Distribución horizontal de enlaces, idioma, tema y CV. */
 .nav-links {
   display: flex;
   list-style: none;
@@ -33,10 +36,12 @@
   padding: 0;
 }
 
+/* Evita que el nombre de marca se comprima. */
 .logo {
   flex-shrink: 0;
 }
 
+/* Color base, estado activo y cambio de color de los enlaces. */
 .nav-links a {
   color: var(--text-secondary);
   text-decoration: none;
@@ -53,6 +58,7 @@
   color: var(--accent-cyan);
 }
 
+/* Grupo de botones para elegir el idioma del contenido. */
 .language-toggle {
   display: inline-flex;
   align-items: center;
@@ -63,6 +69,7 @@
   background: rgba(255, 255, 255, 0.04);
 }
 
+/* Apariencia de cada opción de idioma y resaltado de la selección. */
 .language-toggle button {
   min-width: 34px;
   padding: 6px 7px;
@@ -87,6 +94,7 @@
   outline-offset: 2px;
 }
 
+/* Selector visual de tema con iconos de luna y sol. */
 .theme-toggle {
   position: relative;
   display: inline-flex;
@@ -103,6 +111,7 @@
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
+/* Respuesta visual y foco de teclado del selector de tema. */
 .theme-toggle:hover {
   border-color: var(--border-glow);
 }
@@ -112,6 +121,7 @@
   outline-offset: 3px;
 }
 
+/* Indicador que se desplaza para señalar el tema seleccionado. */
 .theme-toggle-indicator {
   position: absolute;
   top: 3px;
@@ -124,6 +134,7 @@
   transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
+/* Tamaño y colores de los iconos incluidos en el selector. */
 .theme-icon {
   position: relative;
   z-index: 1;
@@ -140,6 +151,7 @@
   color: var(--text-secondary);
 }
 
+/* Posición del indicador y contraste de iconos cuando el tema es claro. */
 :root[data-theme="light"] .theme-toggle-indicator {
   transform: translateX(36px);
 }
@@ -152,6 +164,7 @@
   color: var(--bg-dark);
 }
 
+/* Enlace de descarga o visualización del currículum. */
 .btn-cv {
   padding: 8px 16px;
   border: 1px solid var(--accent-cyan);
@@ -166,6 +179,7 @@
   box-shadow: 0 0 12px rgba(0, 242, 254, 0.3);
 }
 
+/* Reduce espacios y tipografía en tabletas y ventanas medianas. */
 @media (max-width: 868px) {
   .navbar {
     gap: 12px;
@@ -181,6 +195,7 @@
   }
 }
 
+/* Apila la marca y permite que los controles ocupen varias filas en móvil. */
 @media (max-width: 600px) {
   .navbar {
     align-items: flex-start;

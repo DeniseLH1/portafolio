@@ -1,3 +1,4 @@
+/* Distribución principal de la portada con foto y presentación. */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -11,11 +12,12 @@
   margin: 0 auto;
 }
 
-/* Contenedor e Imagen de Perfil */
+/* Mantiene la imagen de perfil en su tamaño y proporción. */
 .profile-container {
   flex-shrink: 0; /* Impide que la foto se deforme o encoja */
 }
 
+/* Recorte, bordes y brillo de la fotografía de perfil. */
 .profile-img {
   width: 300px;
   height: 300px;
@@ -26,12 +28,13 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Amplía ligeramente la foto al pasar el cursor. */
 .profile-img:hover {
   transform: scale(1.03);
   box-shadow: 0 0 35px rgba(0, 242, 254, 0.45);
 }
 
-/* Contenido de texto */
+/* Columna con estado, nombre, rol, descripción y enlaces. */
 .hero-content {
   flex: 1;
   display: flex;
@@ -40,6 +43,7 @@
   text-align: left;
 }
 
+/* Etiqueta que muestra la disponibilidad profesional. */
 .badge-status {
   align-self: flex-start;
   background: rgba(0, 242, 254, 0.08);
@@ -51,6 +55,7 @@
   font-weight: 500;
 }
 
+/* Nombre principal y rol profesional de la portada. */
 .hero-content h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -68,6 +73,7 @@
   margin: 0;
 }
 
+/* Texto descriptivo y grupo de acciones de la portada. */
 .hero-description {
   font-size: 1rem;
   color: var(--text-secondary);
@@ -83,7 +89,7 @@
   flex-wrap: wrap;
 }
 
-/* Adaptación para pantallas pequeñas (Móviles / Tablets) */
+/* Reordena y centra la portada en pantallas pequeñas. */
 @media (max-width: 868px) {
   .hero-section {
     flex-direction: column;

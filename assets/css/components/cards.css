@@ -1,3 +1,4 @@
+/* Apariencia compartida por tarjetas de proyectos, habilidades y contacto. */
 .card {
   background: var(--bg-card);
   backdrop-filter: blur(12px); /* Desenfoca lo que está detrás */
@@ -9,7 +10,7 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-/* Efecto Hover con resplandor neón */
+/* Realce de las tarjetas cuando el cursor pasa sobre ellas. */
 .card:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-glow);
@@ -17,12 +18,14 @@
   box-shadow: 0 12px 40px rgba(0, 242, 254, 0.15);
 }
 
+/* Rejilla y espaciado de las tarjetas de habilidades. */
 .skills-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 
+/* Organización del título y contenido de cada grupo de habilidades. */
 .skill-card {
   display: flex;
   flex-direction: column;
@@ -30,6 +33,7 @@
   gap: 14px;
 }
 
+/* Título y texto de apoyo de cada tarjeta de habilidades. */
 .skill-card h4 {
   margin: 0;
   color: var(--accent-cyan);
@@ -43,6 +47,7 @@
   text-align: justify;
 }
 
+/* Etiquetas flexibles para tecnologías y habilidades individuales. */
 .skill-items {
   display: flex;
   flex-wrap: wrap;
@@ -69,6 +74,7 @@
   margin-top: 0 !important;
 }
 
+/* Ajustes particulares de la tarjeta de presentación personal. */
 .about-card {
   max-width: 980px !important;
   padding: 28px 30px 28px 30px !important;
@@ -76,6 +82,7 @@
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
 }
 
+/* Distribución en columnas de la fotografía y la biografía. */
 .about-layout {
   display: grid;
   grid-template-columns: minmax(0, 430px) minmax(0, 1fr);
@@ -84,6 +91,7 @@
   width: 100%;
 }
 
+/* Marco de la fotografía dentro de la sección Sobre Mí. */
 .about-photo-placeholder {
   width: 100%;
   max-width: 430px;
@@ -100,6 +108,7 @@
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.2);
 }
 
+/* Recorte de la imagen para llenar su marco sin deformarse. */
 .about-photo {
   width: 100%;
   height: 100%;
@@ -110,6 +119,7 @@
   background: rgba(12, 26, 36, 0.25);
 }
 
+/* Espaciado y legibilidad de los párrafos biográficos. */
 .about-text {
   display: flex;
   flex-direction: column;
@@ -130,6 +140,7 @@
   text-align: justify;
 }
 
+/* Coloca la foto encima de la biografía en pantallas estrechas. */
 @media (max-width: 700px) {
   .about-layout {
     grid-template-columns: 1fr;

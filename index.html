@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jennifer López | Técnica en Desarrollo de Software</title>
 
-  <!-- Fuentes Google (Inter) -->
+  <!-- Fuentes e iconos externos usados en títulos, texto y tecnologías. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
-  <!-- Estilos CSS -->
+  <!-- Variables de tema primero; después, estilos globales y componentes. -->
   <link rel="stylesheet" href="./assets/css/variables.css">
   <link rel="stylesheet" href="./assets/css/global.css">
   <link rel="stylesheet" href="./assets/css/components/navbar.css">
@@ -23,8 +23,9 @@
 </head>
 <body>
 
-  <!-- Barra de Navegación -->
+  <!-- Navegación fija: enlaces de sección, idioma, tema y currículum. -->
   <nav class="navbar">
+    <!-- La marca también sirve como enlace para volver al inicio. -->
     <div class="logo">
       <a href="#hero">&lt;JenniferLópez /&gt;</a>
     </div>
@@ -33,12 +34,14 @@
       <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
       <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
       <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+      <!-- Estos botones cambian los textos marcados con data-i18n. -->
       <li>
         <div class="language-toggle" role="group" aria-label="Idioma / Language">
           <button type="button" data-set-language="es" aria-pressed="true">ES</button>
           <button type="button" data-set-language="en" aria-pressed="false">EN</button>
         </div>
       </li>
+      <!-- Alterna el tema; los iconos son decorativos y el botón aporta el nombre accesible. -->
       <li>
         <button type="button" class="theme-toggle" data-theme-toggle aria-label="Cambiar a modo claro" aria-pressed="false" title="Cambiar a modo claro">
           <span class="theme-toggle-indicator" aria-hidden="true"></span>
@@ -55,7 +58,7 @@
     </ul>
   </nav>
 
-<!-- Sección Hero -->
+<!-- Portada visible al entrar: presenta el perfil y los enlaces principales. -->
   <header id="hero" class="hero-section page-view" data-page-view>
     <!-- Contenedor de la foto de perfil -->
     <div class="profile-container">
@@ -78,7 +81,7 @@
     </div>
   </header>
 
-  <!-- Sección Sobre Mí -->
+  <!-- Vista biográfica: fotografía y párrafos que se traducen según el idioma. -->
   <section id="sobre-mi" class="section-container page-view" data-page-view hidden>
     <h3 class="section-title" data-i18n="about.title">Sobre Mí</h3>
     <div class="card glass-card about-card">
@@ -98,12 +101,12 @@
     </div>
   </section>
 
-  <!-- Sección Proyectos -->
+  <!-- Galería: cada tarjeta reúne imagen, resumen, tecnologías y repositorio. -->
   <section id="proyectos" class="section-container page-view" data-page-view hidden>
     <h3 class="section-title" data-i18n="projects.title">Proyectos Destacados</h3>
     <div class="projects-grid">
 
-      <!-- Proyecto 1: Tickyiyo -->
+      <!-- Proyecto 1: plataforma de venta y gestión de entradas. -->
       <article class="card project-card">
         <div class="project-img-placeholder">
           <img src="./assets/img/projects/tickyiyo.png" alt="Vista previa Tickyiyo" data-i18n-alt="projects.tickyiyoAlt" onerror="this.style.display='none'">
@@ -123,7 +126,7 @@
         </div>
       </article>
 
-      <!-- Proyecto 2: Automatización n8n -->
+      <!-- Proyecto 2: flujos de automatización e integración con Telegram. -->
       <article class="card project-card">
         <div class="project-img-placeholder">
           <img src="./assets/img/projects/n8n.png" alt="Vista previa n8n" data-i18n-alt="projects.n8nAlt" onerror="this.style.display='none'">
@@ -143,7 +146,7 @@
         </div>
       </article>
 
-      <!-- Proyecto 3: MusicStream -->
+      <!-- Proyecto 3: interfaz web para explorar y reproducir música. -->
       <article class="card project-card">
         <div class="project-img-placeholder">
           <img src="./assets/img/projects/musicstream.png" alt="Vista previa MusicStream" data-i18n-alt="projects.musicAlt" onerror="this.style.display='none'">
@@ -166,10 +169,11 @@
     </div>
   </section>
 
-  <!-- Sección Habilidades -->
+  <!-- Vista de habilidades técnicas y personales, agrupadas por categoría. -->
   <section id="habilidades" class="section-container page-view" data-page-view hidden>
     <h3 class="section-title" data-i18n="skills.technicalTitle">Habilidades Técnicas</h3>
     <div class="skills-grid">
+      <!-- Tecnologías para construir interfaces web. -->
       <div class="card skill-card">
         <h4 data-i18n="skills.frontend">Frontend</h4>
         <div class="skill-items" aria-label="Lenguajes y tecnologías frontend" data-i18n-aria-label="skills.frontendLabel">
@@ -179,6 +183,7 @@
           <span class="skill-item"><i class="devicon-css3-plain colored" aria-hidden="true"></i>CSS</span>
         </div>
       </div>
+      <!-- Lenguajes, servidores y bases de datos. -->
       <div class="card skill-card">
         <h4 data-i18n="skills.backend">Backend & Bases de Datos</h4>
         <div class="skill-items" aria-label="Tecnologías backend y bases de datos" data-i18n-aria-label="skills.backendLabel">
@@ -191,6 +196,7 @@
           <span class="skill-item"><i class="devicon-firebase-plain colored" aria-hidden="true"></i>Firebase</span>
         </div>
       </div>
+      <!-- Herramientas de desarrollo, control de versiones y automatización. -->
       <div class="card skill-card">
         <h4 data-i18n="skills.tools">Herramientas & Automatización</h4>
         <div class="skill-items" aria-label="Herramientas y automatización" data-i18n-aria-label="skills.toolsLabel">
@@ -204,6 +210,7 @@
           <span class="skill-item"><i class="devicon-n8n-plain colored" aria-hidden="true"></i>n8n</span>
         </div>
       </div>
+      <!-- Experiencia complementaria en soporte técnico y robótica. -->
       <div class="card skill-card">
         <h4 data-i18n="skills.maintenance">Mantenimiento y Robótica</h4>
         <div class="skill-items" aria-label="Mantenimiento de dispositivos y robótica" data-i18n-aria-label="skills.maintenanceLabel">
@@ -211,6 +218,7 @@
           <span class="skill-item"><i class="devicon-arduino-plain colored" aria-hidden="true"></i>Arduino Uno</span>
         </div>
       </div>
+      <!-- Cualidades interpersonales y de trabajo. -->
       <h3 class="section-title" data-i18n="skills.softTitle">Habilidades Blandas</h3>
       <div class="card skill-card">
         <h4 data-i18n="skills.softTitle">Habilidades Blandas</h4>
@@ -227,7 +235,7 @@
     </div>
   </section>
 
-  <!-- Footer / Contacto -->
+  <!-- Contacto: copiar el correo o abrir perfiles profesionales. -->
   <footer id="contacto" class="footer-container page-view" data-page-view hidden>
     <div class="card glass-card text-center">
       <h3 data-i18n="contact.title">Contáctame</h3>
@@ -235,6 +243,7 @@
         Estoy disponible para incorporarme a equipos de desarrollo web y proyectos de tecnología. ¡Hablemos!
       </p>
       <div class="contact-links">
+        <!-- El botón copia el correo; el estado oculto anuncia el resultado a lectores de pantalla. -->
         <button type="button" class="btn btn-secondary" data-copy-email="jennifer.lopez.devgt@gmail.com">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <rect x="3" y="5" width="18" height="14" rx="2"></rect>
@@ -254,6 +263,7 @@
     </div>
   </footer>
 
+  <!-- Carga primero los textos y después la lógica que los aplica a la página. -->
   <script src="./assets/js/translations.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>

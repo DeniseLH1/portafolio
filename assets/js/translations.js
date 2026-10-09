@@ -1,21 +1,25 @@
 window.portfolioTranslations = {
   es: {
+    // Título de la pestaña y textos de la navegación principal.
     documentTitle: "Jennifer López | Desarrolladora Full Stack Junior",
     "nav.about": "Sobre Mí",
     "nav.projects": "Proyectos",
     "nav.skills": "Habilidades",
     "nav.contact": "Contacto",
     "nav.cv": "Visualizar CV",
+    // Descripción accesible de la imagen, disponibilidad y contenido de portada.
     "hero.profileAlt": "Jennifer Denise López Hernandez",
     "hero.status": "🟢 Disponible para proyectos y vacantes",
     "hero.role": "Técnico en desarrollo de software",
     "hero.description": "Desarrolladora de software orientada a la creación de aplicaciones web escalables, integración de servicios backend, bases de datos y automatizaciones de flujos de trabajo. Apasionada por resolver problemas complejos mediante código limpio, arquitectura eficiente e interfaces intuitivas.",
     "hero.projectsButton": "Ver Proyectos",
+    // Encabezado y párrafos de la sección biográfica.
     "about.title": "Sobre Mí",
     "about.description": "¡Hola! Soy Jennifer Denise, Técnica en Desarrollo de Software y apasionada de la tecnología. Mi gusto por construir cosas no empezó solo en la pantalla: proviene de mi interés por la robótica, electrónica y la curiosidad por entender cómo funcionan los sistemas desde la base.",
     "about.description2": "Actualmente potencio mi perfil en el programa intensivo de <strong>Campuslands</strong>, donde desarrollo soluciones de software utilizando <strong>JavaScript, TypeScript, Node.js, Express, MongoDB y PostgreSQL</strong>, combinando la lógica del backend con automatizaciones y desarrollo frontend intuitivo.",
     "about.description3": "Me considero una persona perseverante, analítica y con gran capacidad de adaptación. Fuera del código, disfruto de la naturaleza, cuidar de mis plantas (especialmente suculentas y cactus), pasar tiempo al aire libre con mis mascotas.",
     "about.description4": "Mi objetivo es integrarme a un equipo colaborativo donde pueda aportar en la creación de productos digitales sólidos, mientras continúo evolucionando en el área de ingeniería de software.",
+    // Textos de títulos, imágenes, descripciones y enlaces de proyectos.
     "projects.title": "Proyectos Destacados",
     "projects.tickyiyoAlt": "Vista previa de Tickyiyo",
     "projects.tickyiyoTitle": "Tickyiyo – Plataforma de Ticketing para Eventos",
@@ -27,6 +31,7 @@ window.portfolioTranslations = {
     "projects.musicTitle": "MusicStream – Plataforma Web de Streaming Musical",
     "projects.musicDescription": "Aplicación web frontend con interfaz en modo oscuro dedicada a la exploración musical, detalle de álbumes, reproductor interactivo de audio y flujo de checkout. Maquetada con un enfoque moderno, responsivo y de alto rendimiento visual.",
     "projects.repository": "Ver repositorio ↗",
+    // Nombres de categorías y etiquetas accesibles de habilidades.
     "skills.technicalTitle": "Habilidades Técnicas",
     "skills.frontend": "Frontend",
     "skills.frontendLabel": "Lenguajes y tecnologías frontend",
@@ -46,6 +51,7 @@ window.portfolioTranslations = {
     "skills.empathy": "Empatía",
     "skills.activeListening": "Escucha activa",
     "skills.adaptability": "Adaptabilidad",
+    // Mensajes de contacto, copia del correo y aviso de copyright.
     "contact.title": "Contáctame",
     "contact.description": "Estoy disponible para incorporarme a equipos de desarrollo web y proyectos de tecnología. ¡Hablemos!",
     "contact.email": "Correo",
@@ -56,22 +62,26 @@ window.portfolioTranslations = {
     "contact.copyright": "© 2026 Jennifer Denise López Hernandez."
   },
   en: {
+    // Browser tab title and primary navigation labels.
     documentTitle: "Jennifer López | Junior Full Stack Developer",
     "nav.about": "About Me",
     "nav.projects": "Projects",
     "nav.skills": "Skills",
     "nav.contact": "Contact",
     "nav.cv": "View Resume",
+    // Accessible profile description, availability, and introduction text.
     "hero.profileAlt": "Jennifer Denise López Hernandez",
     "hero.status": "🟢 Available for projects and opportunities",
     "hero.role": "Software Development Technician",
     "hero.description": "Software developer focused on creating scalable web applications, integrating backend services and databases, and automating workflows. Passionate about solving complex problems with clean code, efficient architecture, and intuitive interfaces.",
     "hero.projectsButton": "View Projects",
+    // Heading and paragraphs for the biography section.
     "about.title": "About Me",
     "about.description": "Hi! I’m Jennifer Denise, a Junior Full Stack Developer passionate about technology. My interest in building things didn’t begin only on screen; it comes from my fascination with robotics, electronics, and understanding how systems work from the ground up.",
     "about.description2": "I’m currently strengthening my profile through the intensive <strong>Campuslands</strong> program, where I develop software solutions using <strong>JavaScript, TypeScript, Node.js, Express, MongoDB, and PostgreSQL</strong>, combining backend logic with automation and intuitive frontend development.",
     "about.description3": "I consider myself a persevering, analytical person with strong adaptability. Outside of coding, I enjoy nature, caring for my plants (especially succulents and cacti), and spending time outdoors with my pets.",
     "about.description4": "My goal is to join a collaborative team where I can contribute to the creation of solid digital products while continuing to grow in the field of software engineering.",
+    // Project titles, image descriptions, summaries, and repository link.
     "projects.title": "Featured Projects",
     "projects.tickyiyoAlt": "Tickyiyo preview",
     "projects.tickyiyoTitle": "Tickyiyo – Event Ticketing Platform",
@@ -83,6 +93,7 @@ window.portfolioTranslations = {
     "projects.musicTitle": "MusicStream – Music Streaming Web Platform",
     "projects.musicDescription": "Frontend web application with a dark mode interface designed for music discovery, album details, an interactive audio player, and a checkout flow. Built with a modern, responsive, and visually refined approach.",
     "projects.repository": "View repository ↗",
+    // Skill category names and accessible labels.
     "skills.technicalTitle": "Technical Skills",
     "skills.frontend": "Frontend",
     "skills.frontendLabel": "Frontend languages and technologies",
@@ -102,6 +113,7 @@ window.portfolioTranslations = {
     "skills.empathy": "Empathy",
     "skills.activeListening": "Active listening",
     "skills.adaptability": "Adaptability",
+    // Contact messages, email-copy feedback, and copyright notice.
     "contact.title": "Get in touch",
     "contact.description": "I’m available to join web development teams and technology projects. Let’s talk!",
     "contact.email": "Email",

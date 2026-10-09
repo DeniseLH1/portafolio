@@ -1,4 +1,6 @@
+// Espera a que el HTML esté listo antes de conectar los controles del sitio.
 document.addEventListener("DOMContentLoaded", () => {
+  // Referencias a traducciones y elementos controlados por JavaScript.
   const translations = window.portfolioTranslations;
   const languageButtons = [...document.querySelectorAll("[data-set-language]")];
   const views = [...document.querySelectorAll("[data-page-view]")];
@@ -7,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentLanguage = "es";
   let currentTheme = "dark";
 
+  // Recupera las preferencias guardadas; usa valores predeterminados si no hay acceso.
   try {
     currentLanguage = localStorage.getItem("portfolio-language") === "en" ? "en" : "es";
   } catch {
@@ -19,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     currentTheme = "dark";
   }
 
+  // Aplica el tema, actualiza el estado accesible del botón y guarda la selección.
   function setTheme(theme) {
     currentTheme = theme;
     document.documentElement.dataset.theme = theme;
@@ -37,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Traduce textos, etiquetas accesibles y metadatos al idioma seleccionado.
   function setLanguage(language) {
     const dictionary = translations[language];
     if (!dictionary) return;
@@ -78,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Conecta los botones de idioma y tema con sus funciones de actualización.
   languageButtons.forEach(button => {
     button.addEventListener("click", () => setLanguage(button.dataset.setLanguage));
   });
@@ -89,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTheme(currentTheme);
   setLanguage(currentLanguage);
 
+  // Muestra solo la vista indicada en la URL y marca su enlace como activo.
   function showCurrentView() {
     const requestedId = window.location.hash.slice(1);
     const activeId = views.some(view => view.id === requestedId) ? requestedId : "hero";
@@ -111,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("hashchange", showCurrentView);
   showCurrentView();
 
+  // Añade sombra a la barra cuando la página se desplaza hacia abajo.
   const navbar = document.querySelector(".navbar");
   window.addEventListener("scroll", () => {
     navbar.style.boxShadow = window.scrollY > 50
@@ -123,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const copyEmailStatus = document.querySelector(".contact-copy-status");
   let copyFeedbackTimeout;
 
+  // Copia el correo al portapapeles; usa un campo temporal como alternativa.
   copyEmailButton?.addEventListener("click", async () => {
     const email = copyEmailButton.dataset.copyEmail;
     let copied = false;
@@ -152,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
+    // Anuncia el resultado y restaura el texto del botón después de dos segundos.
     clearTimeout(copyFeedbackTimeout);
     const translationsForLanguage = translations[currentLanguage];
     copyEmailLabel.textContent = copied

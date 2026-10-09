@@ -1,5 +1,7 @@
-// Estructura de datos para escalar o renderizar dinámicamente tus proyectos
+// Catálogo estructurado para reutilizar o renderizar dinámicamente los proyectos.
+// Cada objeto contiene identificador, contenido, tecnologías, enlaces e imagen.
 const projectsData = [
+  // Plataforma para vender y administrar entradas de eventos.
   {
     id: "tickyiyo",
     title: "Tickyiyo – Plataforma de Ticketing para Eventos",
@@ -9,6 +11,7 @@ const projectsData = [
     githubUrl: "https://github.com/DeniseLH1/conciertos_tickyiyo.git",
     image: "./assets/img/projects/tickyiyo.png"
   },
+  // Flujos de automatización que conectan n8n, Telegram y otros servicios.
   {
     id: "n8n-automation",
     title: "Flujos de Automatización con n8n y Telegram",
@@ -18,6 +21,7 @@ const projectsData = [
     githubUrl: "https://github.com/DeniseLH1/justificacion_inasistencia.git",
     image: "./assets/img/projects/n8n.png"
   },
+  // Interfaz web para explorar música y reproducir canciones.
   {
     id: "music-stream",
     title: "MusicStream – Plataforma Web de Streaming Musical",

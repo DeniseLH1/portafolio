@@ -1,3 +1,4 @@
+/* Estilo y disposición compartidos por todos los botones del sitio. */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -14,18 +15,21 @@
   transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Botón principal con degradado para destacar la acción más importante. */
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
   color: var(--text-on-accent);
   box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
 }
 
+/* Botones secundarios para enlaces y acciones complementarias. */
 .btn-secondary {
   border-color: rgba(148, 163, 184, 0.35);
   background: rgba(255, 255, 255, 0.04);
   color: var(--text-primary);
 }
 
+/* Elevación al pasar el cursor y aumento del brillo del botón principal. */
 .btn-primary:hover,
 .btn-secondary:hover {
   transform: translateY(-2px);
@@ -41,6 +45,7 @@
   box-shadow: 0 8px 24px rgba(0, 242, 254, 0.12);
 }
 
+/* Indicador visible para navegación mediante teclado. */
 .btn:focus-visible {
   outline: 2px solid var(--accent-cyan);
   outline-offset: 3px;

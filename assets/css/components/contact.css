@@ -1,3 +1,4 @@
+/* Centra la tarjeta de contacto y define el espacio alrededor del pie. */
 .footer-container {
   padding: 80px 8% 40px;
   display: flex;
@@ -5,6 +6,7 @@
   box-sizing: border-box;
 }
 
+/* Distribución interior de la tarjeta de contacto. */
 .footer-container .card {
   max-width: 600px;
   width: 100%;
@@ -15,6 +17,7 @@
   padding: 40px 24px;
 }
 
+/* Título y texto introductorio de contacto. */
 .footer-container h3 {
   font-size: 1.8rem;
   margin: 0;
@@ -28,6 +31,7 @@
   text-align: justify;
 }
 
+/* Grupo adaptable de correo, GitHub y LinkedIn. */
 .contact-links {
   display: flex;
   flex-wrap: wrap;
@@ -36,11 +40,13 @@
   width: 100%;
 }
 
+/* Separación entre iconos y texto dentro de las acciones de contacto. */
 .contact-links .btn {
   gap: 8px;
   cursor: pointer;
 }
 
+/* Mensaje accesible para anunciar el resultado de copiar el correo. */
 .contact-copy-status {
   position: absolute;
   width: 1px;
@@ -53,6 +59,7 @@
   border: 0;
 }
 
+/* Texto de derechos al final de la tarjeta. */
 .copyright {
   font-size: 0.8rem;
   color: var(--text-secondary);
