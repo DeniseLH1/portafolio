@@ -16,7 +16,7 @@
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-  color: var(--bg-dark);
+  color: var(--text-on-accent);
   box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
 }
 

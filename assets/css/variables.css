@@ -1,19 +1,54 @@
+/* Valores predeterminados de la interfaz: corresponden al tema oscuro. */
 :root {
-  /* Fondo base y superficies */
+  /* Fondo principal, tarjetas, navegación y luces decorativas. */
   --bg-dark: #070a13;
   --bg-card: rgba(15, 23, 42, 0.6);
   --bg-card-hover: rgba(30, 41, 59, 0.7);
+  --navbar-bg: rgba(7, 10, 19, 0.85);
+  --page-glow-cyan: rgba(0, 242, 254, 0.12);
+  --page-glow-purple: rgba(127, 0, 255, 0.1);
+  --page-glow-blue: rgba(79, 172, 254, 0.08);
 
-  /* Colores de neón y acentos */
+  /* Colores de acento y texto que aparece sobre esos acentos. */
   --accent-cyan: #00f2fe;
   --accent-blue: #4facfe;
   --accent-purple: #7f00ff;
+  --text-on-accent: #070a13;
 
-  /* Bordes e iluminación */
+  /* Separadores y resplandores usados en bordes. */
   --border-color: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(0, 242, 254, 0.3);
 
-  /* Texto */
+  /* Colores para texto principal y texto secundario. */
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
+}
+
+/* Reemplaza los valores anteriores cuando JavaScript activa el tema claro. */
+:root[data-theme="light"] {
+  /* Fondo claro para la página, tarjetas, barra y brillos decorativos. */
+  --bg-dark: #f3f7f7;
+  --bg-card: rgba(255, 255, 255, 0.84);
+  --bg-card-hover: #ffffff;
+  --navbar-bg: rgba(243, 247, 247, 0.9);
+  --page-glow-cyan: rgba(8, 119, 131, 0.1);
+  --page-glow-purple: rgba(105, 65, 165, 0.06);
+  --page-glow-blue: rgba(36, 107, 176, 0.07);
+
+  /* Acentos y color de texto legible sobre los botones de acento. */
+  --accent-cyan: #087783;
+  --accent-blue: #246bb0;
+  --accent-purple: #6941a5;
+  --text-on-accent: #ffffff;
+
+  /* Bordes y resplandores adaptados al fondo claro. */
+  --border-color: rgba(23, 37, 43, 0.12);
+  --border-glow: rgba(8, 119, 131, 0.28);
+
+  /* Texto principal y secundario para conservar la legibilidad. */
+  --text-primary: #17252b;
+  --text-secondary: #586a72;
+
+  /* Indica al navegador que use controles nativos de apariencia clara. */
+  color-scheme: light;
 }

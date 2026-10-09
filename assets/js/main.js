@@ -3,12 +3,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const languageButtons = [...document.querySelectorAll("[data-set-language]")];
   const views = [...document.querySelectorAll("[data-page-view]")];
   const navigationLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const themeButton = document.querySelector("[data-theme-toggle]");
   let currentLanguage = "es";
+  let currentTheme = "dark";
 
   try {
     currentLanguage = localStorage.getItem("portfolio-language") === "en" ? "en" : "es";
   } catch {
     currentLanguage = "es";
+  }
+
+  try {
+    currentTheme = localStorage.getItem("portfolio-theme") === "light" ? "light" : "dark";
+  } catch {
+    currentTheme = "dark";
+  }
+
+  function setTheme(theme) {
+    currentTheme = theme;
+    document.documentElement.dataset.theme = theme;
+    themeButton?.setAttribute("aria-pressed", String(theme === "light"));
+
+    const action = theme === "dark"
+      ? (currentLanguage === "es" ? "Cambiar a modo claro" : "Switch to light mode")
+      : (currentLanguage === "es" ? "Cambiar a modo oscuro" : "Switch to dark mode");
+    themeButton?.setAttribute("aria-label", action);
+    themeButton?.setAttribute("title", action);
+
+    try {
+      localStorage.setItem("portfolio-theme", theme);
+    } catch {
+      // The selected theme still applies for this page view.
+    }
   }
 
   function setLanguage(language) {
@@ -43,6 +69,8 @@ document.addEventListener("DOMContentLoaded", () => {
       button.setAttribute("aria-pressed", String(button.dataset.setLanguage === language));
     });
 
+    setTheme(currentTheme);
+
     try {
       localStorage.setItem("portfolio-language", language);
     } catch {
@@ -54,6 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => setLanguage(button.dataset.setLanguage));
   });
 
+  themeButton?.addEventListener("click", () => {
+    setTheme(currentTheme === "dark" ? "light" : "dark");
+  });
+
+  setTheme(currentTheme);
   setLanguage(currentLanguage);
 
   function showCurrentView() {
