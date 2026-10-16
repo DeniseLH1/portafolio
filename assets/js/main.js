@@ -6,8 +6,67 @@ document.addEventListener("DOMContentLoaded", () => {
   const views = [...document.querySelectorAll("[data-page-view]")];
   const navigationLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
   const themeButton = document.querySelector("[data-theme-toggle]");
+  const projectTrack = document.querySelector("[data-projects-track]");
+  const projectScrollButtons = [...document.querySelectorAll("[data-project-scroll]")];
+  const projectCards = [...(projectTrack?.querySelectorAll("[data-project-slide]") ?? [])];
+  const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const mobileProjectStackQuery = window.matchMedia("(max-width: 600px)");
   let currentLanguage = "es";
   let currentTheme = "dark";
+
+  function updateProjectCarousel() {
+    if (!projectTrack || projectCards.length === 0) return;
+
+    if (projectTrack.closest("[hidden]")) {
+      projectCards.forEach(card => card.querySelector("video")?.pause());
+      return;
+    }
+
+    const trackCenter = mobileProjectStackQuery.matches
+      ? window.innerHeight / 2
+      : projectTrack.getBoundingClientRect().left + projectTrack.clientWidth / 2;
+    let activeIndex = 0;
+    let closestDistance = Infinity;
+
+    projectCards.forEach((card, index) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = mobileProjectStackQuery.matches
+        ? cardRect.top + cardRect.height / 2
+        : cardRect.left + cardRect.width / 2;
+      const distance = Math.abs(trackCenter - cardCenter);
+
+      if (distance < closestDistance) {
+        activeIndex = index;
+        closestDistance = distance;
+      }
+    });
+
+    projectCards.forEach((card, index) => {
+      const isActive = index === activeIndex;
+      const video = card.querySelector("video");
+
+      card.classList.toggle("is-active", isActive);
+      if (isActive) {
+        card.setAttribute("aria-current", "true");
+      } else {
+        card.removeAttribute("aria-current");
+      }
+
+      if (!video) return;
+      if (isActive && !reducedMotionQuery.matches) {
+        if (video.paused) video.play().catch(() => {});
+      } else if (!video.paused) {
+        video.pause();
+      }
+    });
+
+    projectScrollButtons.forEach(button => {
+      button.disabled = Number(button.dataset.projectScroll) < 0
+        ? activeIndex === 0
+        : activeIndex === projectCards.length - 1;
+    });
+
+  }
 
   // Recupera las preferencias guardadas; usa valores predeterminados si no hay acceso.
   try {
@@ -112,11 +171,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    requestAnimationFrame(updateProjectCarousel);
     window.scrollTo(0, 0);
   }
 
   window.addEventListener("hashchange", showCurrentView);
   showCurrentView();
+
+  projectScrollButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const activeIndex = projectCards.findIndex(card => card.classList.contains("is-active"));
+      const nextCard = projectCards[activeIndex + Number(button.dataset.projectScroll)];
+      if (!projectTrack || !nextCard) return;
+
+      const targetLeft = nextCard.offsetLeft - (projectTrack.clientWidth - nextCard.offsetWidth) / 2;
+      projectTrack.scrollTo({
+        left: targetLeft,
+        behavior: reducedMotionQuery.matches ? "auto" : "smooth"
+      });
+    });
+  });
+
+  projectTrack?.addEventListener("scroll", updateProjectCarousel, { passive: true });
+  window.addEventListener("scroll", () => {
+    if (mobileProjectStackQuery.matches) updateProjectCarousel();
+  }, { passive: true });
+  window.addEventListener("resize", updateProjectCarousel);
+  reducedMotionQuery.addEventListener("change", updateProjectCarousel);
 
   // Añade sombra a la barra cuando la página se desplaza hacia abajo.
   const navbar = document.querySelector(".navbar");

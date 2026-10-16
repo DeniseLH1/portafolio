@@ -17,8 +17,8 @@
   <link rel="stylesheet" href="./assets/css/components/navbar.css">
   <link rel="stylesheet" href="./assets/css/components/hero.css">
   <link rel="stylesheet" href="./assets/css/components/buttons.css">
-  <link rel="stylesheet" href="./assets/css/components/cards.css">
-  <link rel="stylesheet" href="./assets/css/components/projects.css">
+  <link rel="stylesheet" href="./assets/css/components/cards.css?v=about-balance-3">
+  <link rel="stylesheet" href="./assets/css/components/projects.css?v=spotlight-5">
   <link rel="stylesheet" href="./assets/css/components/contact.css">
 </head>
 <body>
@@ -81,18 +81,20 @@
     </div>
   </header>
 
-  <!-- Vista biográfica: fotografía y párrafos que se traducen según el idioma. -->
+  <!-- Presentación personal con fotograma y una composición editorial sencilla. -->
   <section id="sobre-mi" class="section-container page-view" data-page-view hidden>
-    <h3 class="section-title" data-i18n="about.title">Sobre Mí</h3>
-    <div class="card glass-card about-card">
-      <div class="about-layout">
-        <div class="about-photo-placeholder" aria-label="Foto de perfil de Jennifer Denise">
-          <img src="./assets/img/programadora.jpeg" alt="Jennifer Denise López Hernandez" class="about-photo">
+    <div class="about-layout">
+      <figure class="about-visual">
+        <div class="about-photo-placeholder">
+          <div class="about-photo" role="img" aria-label="Fotograma animado de Jennifer trabajando en un proyecto de robótica" data-i18n-aria-label="about.photoAlt"></div>
         </div>
+        <figcaption class="about-caption" data-i18n="about.caption">Entre la robótica, la electrónica y el software.</figcaption>
+      </figure>
+      <div class="about-content">
+        <p class="about-intro" data-i18n-html="about.description">
+          ¡Hola! Soy Jennifer Denise, Técnica en Desarrollo de Software y apasionada de la tecnología. Mi gusto por construir cosas no empezó solo en la pantalla: proviene de mi interés por la robótica, electrónica y la curiosidad por entender cómo funcionan los sistemas desde la base.
+        </p>
         <div class="about-text">
-          <p data-i18n-html="about.description">
-            ¡Hola! Soy Jennifer Denise, Técnica en Desarrollo de Software y apasionada de la tecnología. Mi gusto por construir cosas no empezó solo en la pantalla: proviene de mi interés por la robótica, electrónica y la curiosidad por entender cómo funcionan los sistemas desde la base.
-          </p>
           <p data-i18n-html="about.description2"></p>
           <p data-i18n-html="about.description3"></p>
           <p data-i18n-html="about.description4"></p>
@@ -101,71 +103,83 @@
     </div>
   </section>
 
-  <!-- Galería: cada tarjeta reúne imagen, resumen, tecnologías y repositorio. -->
+  <!-- Galería horizontal con un proyecto enfocado y navegación lateral. -->
   <section id="proyectos" class="section-container page-view" data-page-view hidden>
-    <h3 class="section-title" data-i18n="projects.title">Proyectos Destacados</h3>
-    <div class="projects-grid">
+    <div class="projects-heading">
+      <h3 class="section-title" data-i18n="projects.title">Proyectos Destacados</h3>
+    </div>
+    <div class="projects-carousel">
+      <button type="button" class="projects-arrow" data-project-scroll="-1" aria-label="Ver proyectos anteriores" data-i18n-aria-label="projects.previous" aria-controls="projects-track" disabled>&#8592;</button>
+      <div class="projects-grid" id="projects-track" data-projects-track role="region" aria-label="Carrusel de proyectos" data-i18n-aria-label="projects.carouselLabel" tabindex="0">
 
-      <!-- Proyecto 1: plataforma de venta y gestión de entradas. -->
-      <article class="card project-card">
-        <div class="project-img-placeholder">
-          <img src="./assets/img/projects/tickyiyo.png" alt="Vista previa Tickyiyo" data-i18n-alt="projects.tickyiyoAlt" onerror="this.style.display='none'">
-        </div>
-        <h4 data-i18n="projects.tickyiyoTitle">Tickyiyo – Plataforma de Ticketing para Eventos</h4>
-        <p class="project-desc" data-i18n="projects.tickyiyoDescription">
-          Aplicación web interactiva para la adquisición y gestión de boletos en tiempo real. Cuenta con sistema de autenticación de usuarios, panel administrativo para control de eventos (CRUD completo) y manipulación optimizada del DOM.
-        </p>
-        <div class="tech-tags">
-          <span>JavaScript</span>
-          <span>HTML</span>
-          <span>CSS Grid/Flexbox</span>
-          <span>LocalStorage</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/DeniseLH1/conciertos_tickyiyo" target="_blank" rel="noopener noreferrer" class="btn-link" data-i18n="projects.repository">Ver repositorio ↗</a>
-        </div>
-      </article>
+        <!-- Proyecto 1: plataforma de venta y gestión de entradas. -->
+        <article class="card project-card is-active" data-project-slide>
+          <div class="project-img-placeholder">
+            <video class="project-preview-video" src="./assets/videos/Tickyiyo.mp4" aria-label="Vista previa en video de Tickyiyo" data-i18n-aria-label="projects.tickyiyoVideoAlt" muted loop playsinline preload="metadata"></video>
+          </div>
+          <div class="project-info">
+            <h4 data-i18n="projects.tickyiyoTitle">Tickyiyo – Plataforma de Ticketing para Eventos</h4>
+            <p class="project-desc" data-i18n="projects.tickyiyoDescription">
+              Aplicación web interactiva para la adquisición y gestión de boletos en tiempo real. Cuenta con sistema de autenticación de usuarios, panel administrativo para control de eventos (CRUD completo) y manipulación optimizada del DOM.
+            </p>
+            <div class="tech-tags">
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS Grid/Flexbox</span>
+              <span>LocalStorage</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/DeniseLH1/conciertos_tickyiyo" target="_blank" rel="noopener noreferrer" class="btn-link" data-i18n="projects.repository">Ver repositorio ↗</a>
+            </div>
+          </div>
+        </article>
 
-      <!-- Proyecto 2: flujos de automatización e integración con Telegram. -->
-      <article class="card project-card">
-        <div class="project-img-placeholder">
-          <img src="./assets/img/projects/n8n.png" alt="Vista previa n8n" data-i18n-alt="projects.n8nAlt" onerror="this.style.display='none'">
-        </div>
-        <h4 data-i18n="projects.n8nTitle">Flujos de Automatización con n8n y Telegram</h4>
-        <p class="project-desc" data-i18n="projects.n8nDescription">
-          Implementación de flujos de trabajo automatizados para optimizar el procesamiento y validación de justificantes mediante APIs, integración con Google Sheets y bots interactivos de Telegram, reduciendo tiempos manuales operativos.
-        </p>
-        <div class="tech-tags">
-          <span><i class="devicon-n8n-plain colored" aria-hidden="true"></i>n8n</span>
-          <span>Telegram API</span>
-          <span>Google Sheets API</span>
-          <span>Webhooks</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/DeniseLH1/justificacion_inasistencia" target="_blank" rel="noopener noreferrer" class="btn-link" data-i18n="projects.repository">Ver repositorio ↗</a>
-        </div>
-      </article>
+        <!-- Proyecto 2: flujos de automatización e integración con Telegram. -->
+        <article class="card project-card" data-project-slide>
+          <div class="project-img-placeholder">
+            <img src="./assets/img/projects/n8n.png" alt="Vista previa n8n" data-i18n-alt="projects.n8nAlt" onerror="this.style.display='none'">
+          </div>
+          <div class="project-info">
+            <h4 data-i18n="projects.n8nTitle">Flujos de Automatización con n8n y Telegram</h4>
+            <p class="project-desc" data-i18n="projects.n8nDescription">
+              Implementación de flujos de trabajo automatizados para optimizar el procesamiento y validación de justificantes mediante APIs, integración con Google Sheets y bots interactivos de Telegram, reduciendo tiempos manuales operativos.
+            </p>
+            <div class="tech-tags">
+              <span><i class="devicon-n8n-plain colored" aria-hidden="true"></i>n8n</span>
+              <span>Telegram API</span>
+              <span>Google Sheets API</span>
+              <span>Webhooks</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/DeniseLH1/justificacion_inasistencia" target="_blank" rel="noopener noreferrer" class="btn-link" data-i18n="projects.repository">Ver repositorio ↗</a>
+            </div>
+          </div>
+        </article>
 
-      <!-- Proyecto 3: interfaz web para explorar y reproducir música. -->
-      <article class="card project-card">
-        <div class="project-img-placeholder">
-          <img src="./assets/img/projects/musicstream.png" alt="Vista previa MusicStream" data-i18n-alt="projects.musicAlt" onerror="this.style.display='none'">
-        </div>
-        <h4 data-i18n="projects.musicTitle">MusicStream – Plataforma Web de Streaming Musical</h4>
-        <p class="project-desc" data-i18n="projects.musicDescription">
-          Aplicación web frontend con interfaz en modo oscuro dedicada a la exploración musical, detalle de álbumes, reproductor interactivo de audio y flujo de checkout. Maquetada con un enfoque moderno, responsivo y de alto rendimiento visual.
-        </p>
-        <div class="tech-tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>CSS Grid/Flexbox</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/DeniseLH1/music_stream_app_Jennifer_Lopez" target="_blank" rel="noopener noreferrer" class="btn-link" data-i18n="projects.repository">Ver repositorio ↗</a>
-        </div>
-      </article>
+        <!-- Proyecto 3: interfaz web para explorar y reproducir música. -->
+        <article class="card project-card" data-project-slide>
+          <div class="project-img-placeholder">
+            <video class="project-preview-video" src="./assets/videos/music-stream.mp4" aria-label="Vista previa en video de MusicStream" data-i18n-aria-label="projects.musicVideoAlt" muted loop playsinline preload="metadata"></video>
+          </div>
+          <div class="project-info">
+            <h4 data-i18n="projects.musicTitle">MusicStream – Plataforma Web de Streaming Musical</h4>
+            <p class="project-desc" data-i18n="projects.musicDescription">
+              Aplicación web frontend con interfaz en modo oscuro dedicada a la exploración musical, detalle de álbumes, reproductor interactivo de audio y flujo de checkout. Maquetada con un enfoque moderno, responsivo y de alto rendimiento visual.
+            </p>
+            <div class="tech-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>CSS Grid/Flexbox</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/DeniseLH1/music_stream_app_Jennifer_Lopez" target="_blank" rel="noopener noreferrer" class="btn-link" data-i18n="projects.repository">Ver repositorio ↗</a>
+            </div>
+          </div>
+        </article>
 
+      </div>
+      <button type="button" class="projects-arrow" data-project-scroll="1" aria-label="Ver proyectos siguientes" data-i18n-aria-label="projects.next" aria-controls="projects-track">&#8594;</button>
     </div>
   </section>
 
@@ -183,13 +197,19 @@
           <span class="skill-item"><i class="devicon-css3-plain colored" aria-hidden="true"></i>CSS</span>
         </div>
       </div>
-      <!-- Lenguajes, servidores y bases de datos. -->
+      <!-- Lenguajes y frameworks para el desarrollo backend. -->
       <div class="card skill-card">
-        <h4 data-i18n="skills.backend">Backend & Bases de Datos</h4>
-        <div class="skill-items" aria-label="Tecnologías backend y bases de datos" data-i18n-aria-label="skills.backendLabel">
+        <h4 data-i18n="skills.backend">Backend</h4>
+        <div class="skill-items" aria-label="Tecnologías backend" data-i18n-aria-label="skills.backendLabel">
           <span class="skill-item"><i class="devicon-nodejs-plain colored" aria-hidden="true"></i>Node.js</span>
           <span class="skill-item"><i class="devicon-python-plain colored" aria-hidden="true"></i>Python</span>
           <span class="skill-item"><i class="devicon-express-original" aria-hidden="true"></i>Express.js</span>
+        </div>
+      </div>
+      <!-- Sistemas de bases de datos y almacenamiento. -->
+      <div class="card skill-card">
+        <h4 data-i18n="skills.database">Bases de Datos</h4>
+        <div class="skill-items" aria-label="Bases de datos" data-i18n-aria-label="skills.databaseLabel">
           <span class="skill-item"><i class="devicon-mongodb-plain colored" aria-hidden="true"></i>MongoDB</span>
           <span class="skill-item"><i class="devicon-postgresql-plain colored" aria-hidden="true"></i>PostgreSQL</span>
           <span class="skill-item"><i class="devicon-mysql-plain colored" aria-hidden="true"></i>MySQL</span>
@@ -264,7 +284,7 @@
   </footer>
 
   <!-- Carga primero los textos y después la lógica que los aplica a la página. -->
-  <script src="./assets/js/translations.js"></script>
-  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/translations.js?v=spotlight-3"></script>
+  <script src="./assets/js/main.js?v=mobile-scroll-1"></script>
 </body>
 </html>
