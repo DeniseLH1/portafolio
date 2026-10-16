@@ -30,23 +30,37 @@
 }
 
 /* Elevación al pasar el cursor y aumento del brillo del botón principal. */
-.btn-primary:hover,
-.btn-secondary:hover {
-  transform: translateY(-2px);
+.hero-buttons .btn {
+  transition: transform 0.2s ease, filter 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn-primary:hover {
-  box-shadow: 0 0 28px rgba(0, 242, 254, 0.5);
+.hero-buttons .btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.12);
 }
 
-.btn-secondary:hover {
+.hero-buttons .btn-primary:hover {
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.55);
+}
+
+.hero-buttons .btn-secondary:hover {
   border-color: var(--accent-cyan);
   background: rgba(0, 242, 254, 0.1);
-  box-shadow: 0 8px 24px rgba(0, 242, 254, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 242, 254, 0.16);
+}
+
+.hero-buttons .btn:active {
+  transform: translateY(-1px) scale(0.98);
 }
 
 /* Indicador visible para navegación mediante teclado. */
 .btn:focus-visible {
   outline: 2px solid var(--accent-cyan);
   outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-buttons .btn {
+    transition: none;
+  }
 }

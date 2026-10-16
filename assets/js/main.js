@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const mobileProjectStackQuery = window.matchMedia("(max-width: 600px)");
   const logoText = document.querySelector("[data-typewriter]");
+  const heroSection = document.querySelector(".hero-section");
   let currentLanguage = "es";
   let currentTheme = "dark";
 
@@ -195,6 +196,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("hashchange", showCurrentView);
   showCurrentView();
+  if (heroSection && !heroSection.hidden && !reducedMotionQuery.matches) {
+    heroSection.classList.add("is-entering");
+  }
 
   projectScrollButtons.forEach(button => {
     button.addEventListener("click", () => {
