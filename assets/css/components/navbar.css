@@ -26,6 +26,18 @@
   white-space: nowrap;
 }
 
+.logo-text.is-typing {
+  border-right: 2px solid currentColor;
+  padding-right: 2px;
+  animation: logo-caret 0.75s step-end infinite;
+}
+
+@keyframes logo-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
 /* Distribución horizontal de enlaces, idioma, tema y CV. */
 .nav-links {
   display: flex;
@@ -209,5 +221,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 10px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-text.is-typing {
+    animation: none;
   }
 }

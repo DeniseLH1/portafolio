@@ -18,8 +18,8 @@ window.portfolioTranslations = {
     "about.photoAlt": "Fotograma animado de Jennifer trabajando en un proyecto de robótica",
     "about.caption": "Entre la robótica, la electrónica y el software.",
     "about.description": "¡Hola! Soy Jennifer Denise, Técnica en Desarrollo de Software y apasionada de la tecnología. Mi gusto por construir cosas no empezó solo en la pantalla: proviene de mi interés por la robótica, electrónica y la curiosidad por entender cómo funcionan los sistemas desde la base.",
-    "about.description2": "Actualmente potencio mi perfil en el programa intensivo de <strong>Campuslands</strong>, donde desarrollo soluciones de software utilizando <strong>JavaScript, TypeScript, Node.js, Express, MongoDB y PostgreSQL</strong>, combinando la lógica del backend con automatizaciones y desarrollo frontend intuitivo.",
-    "about.description3": "Me considero una persona perseverante, analítica y con gran capacidad de adaptación. Fuera del código, disfruto de la naturaleza, cuidar de mis plantas (especialmente suculentas y cactus), pasar tiempo al aire libre con mis mascotas.",
+    "about.description2": "Actualmente potencio mi perfil en el programa intensivo de <strong>Campuslands</strong>, donde desarrollo soluciones de software con <strong>JavaScript, TypeScript, Python, HTML y CSS</strong>, además de trabajar con Node.js, Express, MongoDB y PostgreSQL para crear soluciones backend y frontend intuitivas.",
+    "about.description3": "Me considero una persona perseverante, analítica y con gran capacidad de adaptación. Fuera del código, disfruto de la naturaleza, cuidar de mis plantas (especialmente suculentas y cactus), pasar tiempo al aire libre con mis mascotas, practicar skateboarding, correr y escuchar música.",
     "about.description4": "Mi objetivo es integrarme a un equipo colaborativo donde pueda aportar en la creación de productos digitales sólidos, mientras continúo evolucionando en el área de ingeniería de software.",
     // Textos de títulos, imágenes, descripciones y enlaces de proyectos.
     "projects.title": "Proyectos Destacados",
@@ -89,8 +89,8 @@ window.portfolioTranslations = {
     "about.photoAlt": "Animated frame of Jennifer working on a robotics project",
     "about.caption": "Between robotics, electronics, and software.",
     "about.description": "Hi! I’m Jennifer Denise, a Junior Full Stack Developer passionate about technology. My interest in building things didn’t begin only on screen; it comes from my fascination with robotics, electronics, and understanding how systems work from the ground up.",
-    "about.description2": "I’m currently strengthening my profile through the intensive <strong>Campuslands</strong> program, where I develop software solutions using <strong>JavaScript, TypeScript, Node.js, Express, MongoDB, and PostgreSQL</strong>, combining backend logic with automation and intuitive frontend development.",
-    "about.description3": "I consider myself a persevering, analytical person with strong adaptability. Outside of coding, I enjoy nature, caring for my plants (especially succulents and cacti), and spending time outdoors with my pets.",
+    "about.description2": "I’m currently strengthening my profile through the intensive <strong>Campuslands</strong> program, where I develop software solutions with <strong>JavaScript, TypeScript, Python, HTML, and CSS</strong>, while also working with Node.js, Express, MongoDB, and PostgreSQL to build intuitive backend and frontend solutions.",
+    "about.description3": "I consider myself a persevering, analytical person with strong adaptability. Outside of coding, I enjoy nature, caring for my plants (especially succulents and cacti), spending time outdoors with my pets, skateboarding, running, and listening to music.",
     "about.description4": "My goal is to join a collaborative team where I can contribute to the creation of solid digital products while continuing to grow in the field of software engineering.",
     // Project titles, image descriptions, summaries, and repository link.
     "projects.title": "Featured Projects",

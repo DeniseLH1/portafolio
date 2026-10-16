@@ -11,8 +11,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const projectCards = [...(projectTrack?.querySelectorAll("[data-project-slide]") ?? [])];
   const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const mobileProjectStackQuery = window.matchMedia("(max-width: 600px)");
+  const logoText = document.querySelector("[data-typewriter]");
   let currentLanguage = "es";
   let currentTheme = "dark";
+
+  if (logoText && !reducedMotionQuery.matches) {
+    const fullText = logoText.textContent;
+    let characterIndex = 0;
+    logoText.textContent = "";
+    logoText.classList.add("is-typing");
+
+    const typingTimer = window.setInterval(() => {
+      characterIndex += 1;
+      logoText.textContent = fullText.slice(0, characterIndex);
+
+      if (characterIndex >= fullText.length) {
+        window.clearInterval(typingTimer);
+        logoText.classList.remove("is-typing");
+      }
+    }, 65);
+  }
 
   function updateProjectCarousel() {
     if (!projectTrack || projectCards.length === 0) return;
