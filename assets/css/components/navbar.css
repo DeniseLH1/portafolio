@@ -18,12 +18,22 @@
 
 /* Marca del portafolio y enlace para volver al inicio. */
 .logo a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--accent-cyan);
   text-decoration: none;
   letter-spacing: 0.5px;
   white-space: nowrap;
+}
+
+.logo-mark {
+  display: block;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
 }
 
 .logo-text.is-typing {

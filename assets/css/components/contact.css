@@ -8,6 +8,8 @@
 
 /* Distribución interior de la tarjeta de contacto. */
 .footer-container .card {
+  position: relative;
+  overflow: hidden;
   max-width: 600px;
   width: 100%;
   display: flex;
@@ -15,6 +17,20 @@
   align-items: center;
   gap: 16px;
   padding: 40px 24px;
+  border-color: rgba(0, 242, 254, 0.16);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.28);
+}
+
+.footer-container .card::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 56px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: var(--accent-cyan);
+  content: "";
+  transform: translateX(-50%);
 }
 
 /* Título y texto introductorio de contacto. */
@@ -22,6 +38,11 @@
   font-size: 1.8rem;
   margin: 0;
   color: var(--text-primary);
+}
+
+.footer-container p:not(.copyright) {
+  max-width: 48ch;
+  text-align: center;
 }
 
 .footer-container p {
@@ -36,7 +57,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   width: 100%;
 }
 
@@ -44,6 +65,38 @@
 .contact-links .btn {
   gap: 8px;
   cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-links .btn svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.contact-links .btn i {
+  font-size: 1rem;
+}
+
+.contact-links [data-copy-email] {
+  border-color: rgba(0, 242, 254, 0.42);
+  background: rgba(0, 242, 254, 0.08);
+  color: var(--accent-cyan);
+}
+
+.contact-links .btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-cyan);
+  background: rgba(0, 242, 254, 0.12);
+  box-shadow: 0 8px 22px rgba(0, 242, 254, 0.12);
+}
+
+.contact-links .btn:active {
+  transform: translateY(0);
 }
 
 /* Mensaje accesible para anunciar el resultado de copiar el correo. */
@@ -65,4 +118,16 @@
   color: var(--text-secondary);
   opacity: 0.6;
   margin-top: 20px !important;
+}
+
+@media (max-width: 600px) {
+  .footer-container .card {
+    padding: 36px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-links .btn {
+    transition: none;
+  }
 }
